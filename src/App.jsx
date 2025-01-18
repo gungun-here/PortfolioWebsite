@@ -30,7 +30,7 @@ function NavbarComponent() {
         <Link to="/about" className={`${location.pathname === "/about" ? "text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500 " : ""}hover:from-pink-500 hover:to-orange-500`}>About</Link>
         <Link to="/projects" className={`${location.pathname === "/projects" ? "text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500 " : ""}hover:from-pink-500 hover:to-orange-500`}>Projects</Link>
         <Link to="/contact" className={`${location.pathname === "/contact" ? "text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500 " : ""}hover:from-pink-500 hover:to-orange-500`}>Contact</Link>
-        <Link to="/blogs" className={`${location.pathname === "/blogs" ? "text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500 " : ""}hover:from-pink-500 hover:to-orange-500`}>Blogs</Link>
+        
       </div>
 
       <div onMouseEnter={handleEvent}>
@@ -62,7 +62,6 @@ export default function App() {
           <Route path="/about" element={<About />}></Route>
           <Route path="/projects" element={<projects />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
-          <Route path="/blogs" element={<blogs />}></Route>
           <Route path="/connect" element={<connect />}></Route>
         </Routes>
         <div className="fixed right-10 bottom-10"><Switch /></div>
