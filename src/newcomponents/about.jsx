@@ -1,6 +1,5 @@
-//https://www.sophiewestfall.com/
-
 import { useEffect } from "react";
+import {Link} from "react-router-dom"
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -30,7 +29,7 @@ export default function About() {
                 </div>
             </div>
 
-            <div className="flex justify-center items-center" data-aos="fade-left">
+            <Link to="/about"><div className="flex justify-center items-center" data-aos="fade-left">
                 <div className="w-[50%] py-[10rem]">
                     <div className="flex justify-center items-center">
                         <img className="h-[6rem] w-[24rem] ml-[4rem]" src="apt2.png" />
@@ -48,7 +47,7 @@ export default function About() {
                 <div className="w-[50%] px-[10rem] py-[4rem]">
                     <img src="facenext2.png" className="shadow-2xl" />
                 </div>
-            </div>
+            </div></Link>
 
         </div>
     )
