@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
+import { Carousel } from "flowbite-react";
 
 export default function Home() {
 
@@ -67,6 +68,15 @@ export default function Home() {
                         <IoArrowForwardCircleOutline size="3rem" />
                     </div>
                 </div>
+            </div>
+
+            <div className="text-center text-7xl py-[4rem]">My Projects</div>
+
+            <div className="h-[45rem] bg-white cursor-pointer">
+                <Carousel>
+                    <img src="todo.png" alt="" />
+                    <img src="linkedinclone.png" alt="" />
+                </Carousel>
             </div>
         </div>
     );

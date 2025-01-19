@@ -90,6 +90,7 @@ import Home from "./newcomponents/home";
 import Switch from "./newcomponents/switch";
 import About from "./newcomponents/about";
 import Contact from "./newcomponents/contactme";
+import Projects from "./newcomponents/proects";
 
 function NavbarComponent() {
   const location = useLocation();
@@ -153,9 +154,9 @@ function NavbarComponent() {
         {isDropdownVisible && (
           <div className="absolute top-10 z-50 cursor-pointer h-[6rem] w-[11rem]">
             <ul className="flex flex-col gap-4 bg-white border-2 border-white shadow-lg p-4">
-              <li className="hover:underline flex gap-4 items-center">My GitHub <img className="h-8 w-8" src="git2.png"></img></li>
-              <li className="hover:underline flex gap-4 items-center">My LinkedIn <img className="h-8 w-8" src="in2.png"></img></li>
-              <li className="hover:underline flex gap-4 items-center">My Mail <img className="h-8 w-8" src="gmail2.png"></img></li>
+              <a href="http://github.com/gungun-here"><li className="hover:underline flex gap-9 items-center">My GitHub <img className="h-8 w-8" src="git2.png"></img></li></a>
+              <li className="hover:underline flex gap-8 items-center">My LinkedIn <img className="h-8 w-8" src="in2.png"></img></li>
+              <li className="hover:underline flex gap-16 items-center">My Mail <img className="h-8 w-8" src="gmail2.png"></img></li>
             </ul>
           </div>
         )}
@@ -172,7 +173,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<projects />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/connect" element={<connect />} />
         </Routes>
