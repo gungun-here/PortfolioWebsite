@@ -3,17 +3,16 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import { Carousel } from "flowbite-react";
-
+import { Link } from "react-router-dom";
+  AOS.init();
+  
 export default function Home() {
 
-    useEffect(() => {
-        AOS.init();
-    }, []);
-
     const [showText, setShowText] = useState(true); // State to control visibility of the "Scroll to Explore More!" text
+    const [showNavbar, setNavbar] = useState(false);
 
     const handleScroll = () => {
-        if (window.scrollY > 50) {  // You can adjust this threshold as needed
+        if (window.scrollY) {
             setShowText(false); // Hide text after scrolling
         } else {
             setShowText(true); // Show text if we're at the top
@@ -34,9 +33,9 @@ export default function Home() {
                     <div className="text-[4rem] pb-[20rem] w-[20%] font-bold absolute top-[3.8rem] right-[15rem]">I'm Gungun,</div>
                 </div>
                 <img src="portgirl2.png" />
-                <div className="relative hover:scale-105 cursor-pointer">
-                    <img className="h-[60%] w-[100%] pt-[15rem]" src="dialogue.png" />
-                    <div className="text-[4rem] pt-[10rem] font-bold absolute top-[11rem] left-[3.5rem]">A Web Developer!</div>
+                <div className="relative top-[8rem] hover:scale-105 cursor-pointer">
+                    <img className="" src="dialogue.png" />
+                    <div className="text-[4rem] font-bold absolute top-[5.5rem] left-[3.5rem]">A Web Developer!</div>
                 </div>
             </div>
 
@@ -47,7 +46,7 @@ export default function Home() {
                 </div>
             )}
 
-            <div className="flex justify-center items-center bg-[#eee3d2] cursor-pointer" data-aos="fade-left">
+            <Link to="/about" className="flex justify-center items-center bg-[#eee3d2] cursor-pointer" data-aos="fade-left">
                 <div className="w-[50%] py-[10rem]">
                     <div className="flex justify-center items-center">
                         <img className="h-[6rem] w-[24rem] ml-[4rem]" src="apt2.png" />
@@ -68,16 +67,7 @@ export default function Home() {
                         <IoArrowForwardCircleOutline size="3rem" />
                     </div>
                 </div>
-            </div>
-
-            <div className="text-center text-7xl py-[4rem]">My Projects</div>
-
-            <div className="h-[45rem] bg-white cursor-pointer">
-                <Carousel>
-                    <img src="todo.png" alt="" />
-                    <img src="linkedinclone.png" alt="" />
-                </Carousel>
-            </div>
+            </Link>
         </div>
     );
 }

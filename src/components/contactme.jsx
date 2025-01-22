@@ -1,7 +1,5 @@
 import Input from "./input"
 
-import Button from "./submitbtn"
-
 export default function Contact()
 {
     return(
@@ -11,7 +9,6 @@ export default function Contact()
             </div>
             <div className="absolute left-[40rem] top-[20rem]">
                 <Input />
-                <div className="pl-[12rem] py-[3rem]"><Button /></div>
             </div>
         </div>
     )
