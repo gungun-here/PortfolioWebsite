@@ -8,6 +8,10 @@ import { Link } from "react-router-dom";
   
 export default function Home() {
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const [showText, setShowText] = useState(true); // State to control visibility of the "Scroll to Explore More!" text
     const [showNavbar, setNavbar] = useState(false);
 

@@ -61,10 +61,10 @@ export default function NavbarComponent() {
           </button>
         </Link>
         {isDropdownVisible && (
-          <div className="absolute top-10 left-[0.2rem] z-50 cursor-pointer h-[6rem] w-[11.5rem]">
-            <ul className="flex flex-col gap-4 bg-white border-2 border-white shadow-lg p-4 rounded">
+          <div className="absolute top-10 left-[-1rem] z-50 cursor-pointer h-[6rem] w-[11.5rem] shadow-lg">
+            <ul className="flex justify-center items-center flex-col gap-4 bg-white border-2 border-white p-4 rounded">
               <a href="https://github.com/gungun-here"><li className="hover:underline flex gap-9 items-center">My GitHub <img className="h-8 w-8" src="git2.png"></img></li></a>
-              <li className="hover:underline flex gap-6 items-center">My LinkedIn <img className="h-8 w-8" src="in2.png"></img></li>
+              <a href="https://www.linkedin.com/in/gungun-sahni-4a4b43348/"><li className="hover:underline flex gap-6 items-center">My LinkedIn <img className="h-8 w-8" src="in2.png"></img></li></a>
               <li className="flex gap-4 items-center">type2gungun<br/>@gmail.com <img className="h-8 w-8" src="gmail2.png"></img></li>
             </ul>
           </div>

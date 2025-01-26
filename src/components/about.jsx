@@ -1,11 +1,17 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom"
 
-import AOS from 'aos';
+import AOS from 'aos'; 
 import 'aos/dist/aos.css';
+
 AOS.init();
 
 export default function About() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+    
 
     return (
         <div className="bg-[#eee3d2] overflow-hidden">
