@@ -17,7 +17,7 @@ export default function Contact() {
             </div>
             <div className="flex flex-col gap-4 w-[20rem] text-lg ml-[42%] mt-4">
                 Leave a Comment
-                <textarea rows={4} className="rounded-lg" name="comments" id="comments" placeholder="Type here..."></textarea>
+                <textarea rows={4} className="rounded-lg focus:ring-black focus:border-black" name="comments" id="comments" placeholder="Type here..."></textarea>
             </div>
             <button type="submitForm" name="submitForm" class="ml-[57%] my-8 w-[10rem] h-[3rem] bg-black text-white rounded-full hover:bg-black">
                 Submit
